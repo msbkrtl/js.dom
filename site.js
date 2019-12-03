@@ -5,6 +5,7 @@ var addBanner = function() {
   }
   let beforeThis = document.querySelector(".CategoryNavigation-wrapper");
   let newDiv = document.createElement("div");
+  newDiv.className += "banner";
   newDiv.appendChild(banner);
   let parent = document.querySelector(".Base-content");
   parent.insertBefore(newDiv, beforeThis);
