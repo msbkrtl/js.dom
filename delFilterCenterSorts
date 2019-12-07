@@ -1,0 +1,3 @@
+const delFilterCenterSorts = () => {
+        $(".AppliedFilters").style.display = "none";
+        $(".PLP-filterBar").style.cssText = "width: max-content; margin: auto;";};
