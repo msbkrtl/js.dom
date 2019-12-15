@@ -1,0 +1,31 @@
+let totalSaved = () => {
+  let item = document.body.querySelectorAll(".CartItem");
+  let savedAmount = 0;
+  item.forEach(function(a) {
+    if (a.querySelector(".CartItem-oldPrice")) {
+      let oldPrice = parseInt(
+        a.querySelector(".CartItem-oldPrice").innerText.replace(",", "")
+      );
+      let currentPrice = parseInt(
+        a.querySelector(".CartItem-currentPrice").innerText.replace(",", "")
+      );
+      savedAmount += oldPrice - currentPrice;
+    }
+  });
+  let mainDiv = document.createElement("div");
+  mainDiv.className = "CartActions CartMobile";
+  let childDiv = document.createElement("div");
+  childDiv.className = "Collapsible Collapsible__light";
+  mainDiv.appendChild(childDiv);
+  let textDiv = document.createElement("div");
+  textDiv.className = "CartActions-headerText Collapsible-header";
+  childDiv.appendChild(textDiv);
+  if (document.querySelector("html").lang === "en") {
+    textDiv.innerText = "Total Saved: " + savedAmount + " AED";
+  } else {
+    textDiv.innerText = "المجموع المحفوظ " + savedAmount + " ‏ د.إ.";
+  }
+  let appendAfter = document.querySelector(".AmberBox");
+  appendAfter.insertAdjacentElement("afterend", mainDiv);
+  textDiv.style.cssText = "margin-left: 0 !important;";
+};
