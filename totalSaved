@@ -1,5 +1,6 @@
 let totalSaved = () => {
   let item = document.body.querySelectorAll(".CartItem");
+  if(item){
   let savedAmount = 0;
   item.forEach(function(a) {
     if (a.querySelector(".CartItem-oldPrice")) {
@@ -28,4 +29,5 @@ let totalSaved = () => {
   let appendAfter = document.querySelector(".AmberBox");
   appendAfter.insertAdjacentElement("afterend", mainDiv);
   textDiv.style.cssText = "margin-left: 0 !important;";
+  }
 };
