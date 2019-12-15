@@ -1,6 +1,6 @@
 let totalSaved = () => {
   let item = document.body.querySelectorAll(".CartItem");
-  if(item){
+  if(item.querySelector(".CartItem-oldPrice")){
   let savedAmount = 0;
   item.forEach(function(a) {
     if (a.querySelector(".CartItem-oldPrice")) {
