@@ -1,3 +1,6 @@
 const delFilterCenterSorts = () => {
         $(".AppliedFilters").style.display = "none";
-        $(".PLP-filterBar").style.cssText = "width: max-content; margin: auto;";};
+        $(".PLP-mobileFilter").style.cssText = "width: 100%";
+        $(".PLP-mobileSort").style.cssText = "width: 100%";
+        $(".PLP-filterBar").style.cssText = "width: max-content; margin: auto;";
+        };
